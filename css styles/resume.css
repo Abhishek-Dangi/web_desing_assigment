@@ -1,0 +1,27 @@
+.container{
+    background-color: rgb(243, 231, 231);
+}
+.sidnav{
+    background-color: rgb(206, 69, 15);
+    height: 100%;
+    display: inline-block;
+    color: white;
+}
+.rigthcon{
+    /* background-color: forestgreen; */
+}
+img{
+    height: 100px;
+    width: 100px;
+    margin-top: 50px;
+    margin-left: 30px;
+
+}
+#name{
+    text-align: center;
+    padding: 30px;
+    margin-top: 20px;
+}
+.gray{
+    color: rgb(97, 95, 95);
+}

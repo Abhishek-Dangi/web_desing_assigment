@@ -1,0 +1,158 @@
+
+
+#container
+{
+    height: 1100px;
+    width: 84%;
+    background: red;
+
+}
+#header{
+    height:200px;
+    width: 100%;
+    background:rgb(247, 173, 26);
+    background-image: url(/image/pexe-2246476.jpg);
+    height: 10%;
+    width: 1118px;
+
+}
+#menu{
+    height:80px;
+    width: 100%;
+    background:rgb(234, 241, 12);
+
+}
+#content
+{
+    height: 720px;
+    width: 100%;
+     background: yellowgreen;  
+     
+
+}
+#footer{
+    height:200px;
+    width: 100%;
+    background:rgb(247, 173, 26) ;
+}
+#menuLeft{
+    height: 100%;
+    width: 30%;
+    /* background: red;*/
+    float: left;
+
+}
+
+#menuRight{
+    height: 100%;
+    width: 70%;
+   /* background: blueviolet; */
+    float: right;
+}
+
+ #menu ul li{
+    display: inline-block;
+    margin: 10px;
+    
+}
+#menu a{
+    text-decoration: none;
+    color: black;
+    font-size:30px;
+    
+}
+#menu li{
+    list-style-type: none;
+    /* border:1px dashed black; */
+    /* background-color:rgb(245, 149, 197); */
+    /* border-radius: 8px; */
+    padding:5px;
+    
+    
+}
+#contentLeft
+{
+    
+    height: 100%;
+    width: 30%;
+    /* background: gray; */
+    float: left;
+    /* border: 1px solid black; */
+
+   
+}
+
+#contentRight
+{
+    height: 100%;
+    width: 70%;
+    background: rgb(241, 160, 160);
+    float: right;
+  
+}
+#contentRight1
+{
+    height: 100%;
+    width:50%;
+    background-color: black;
+    float: left;
+    color: white;
+}
+#contentRight2
+{
+    height: 100%;
+    width:50%;
+    background-color:rgb(245, 239, 239);
+    float: left;
+}
+#contentLeft a {
+    text-decoration: none;
+    border: 1px dashed black;
+    padding: 10px;
+    color: black;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    
+
+}
+#contentLeft a:hover{
+    background-color: blueviolet;
+}
+#contentLeft li  {
+    margin: 50px;
+    padding-top: 10px;
+    display: absolute;
+    list-style-type: none;
+    width: 300px;
+}
+#footer1{
+    height: 100%;
+    width: 30%;
+    /* padding-left: 50px;
+    padding-top: 50px; */
+    
+    float: left;
+    border-right: 1px solid red; height: 80%;margin:20px;
+}
+
+#footer3{
+    height: 100%;
+    width: 30%;
+    /* padding-left: 50px;
+    padding-top: 50px; */
+    /* background-color: aquamarine; */
+    float:right;
+    border-right: 1px solid red; height: 80%;margin:10px;
+}
+#footer2{
+    height: 100%;
+    width: 30%;
+    /* padding-left: 50px;
+    padding-top: 50px; */
+    /* background-color: rgb(236, 233, 238); */
+    float: right;
+    margin-top: 10px;
+    color: black;
+    
+}
+

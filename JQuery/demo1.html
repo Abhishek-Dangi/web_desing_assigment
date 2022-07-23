@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                //$("p").hide();
+                  $("p").hide(5000);  
+                //$("p").slideUp(5000);
+            })
+            $("#btn2").click(function () {
+                //$("p").show();
+                 $("p").show(7000);
+                //$("p").slideDown(5000);
+            })
+            $("#btn3").click(function () {
+                //$("p").toggle();
+                $("p").toggle(100);
+                //$("p").slideToggle();
+            })
+        });
+
+    </script>
+</head>
+
+<body>
+    <button id="btn1">hide</button>
+    <button id="btn2">show</button>
+    <button id="btn3">toggle</button>
+    <p style="background-color: bisque;"">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam incidunt nihil dolore velit, aliquam,
+        perspiciatis animi voluptatibus debitis excepturi quas omnis maiores, voluptas explicabo quam. Ipsum dolore
+        animi, quaerat placeat consequuntur architecto voluptates explicabo eveniet harum rem odio ipsa consectetur
+        minima magni ad vero ab quos, et est assumenda! Aut. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Sunt obcaecati aperiam atque voluptatum cumque? Quidem eos, eligendi magnam dolor optio velit temporibus ea
+        exercitationem sapiente voluptas porro aspernatur eum accusantium. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Quaerat ab, inventore tempora velit eaque itaque dolor accusantium debitis exercitationem
+        nesciunt quidem. Quae, sunt enim sapiente illum itaque ex cupiditate ea? Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Ducimus dignissimos totam ullam incidunt in modi, aperiam tenetur quod quaerat odit blanditiis
+        quia maiores mollitia nemo enim saepe possimus exercitationem similique porro. Asperiores vero sapiente dolore
+        iusto accusantium ex sit exercitationem ipsam doloremque veniam? Fugit maxime pariatur sint voluptatum iusto
+        perferendis itaque, omnis, consectetur vero assumenda quia quod harum nisi adipisci minus repellat laboriosam
+        temporibus, magni animi sunt quibusdam dolores ipsa. Dolorum sequi debitis accusamus in animi porro corrupti
+        eveniet officia nemo perspiciatis eos repellendus excepturi et, beatae laboriosam adipisci ratione earum! Nemo
+        unde ducimus voluptates temporibus porro assumenda nostrum molestiae. </p>
+</body>
+
+</html>

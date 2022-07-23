@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./java_script/prectical.js"></script>
+</head>
+<body onload="init()">
+    <h3>hello form</h3>
+    <label for="">Name</label> <br>
+    <input type="text"  id="name" placeholder="enter name" onblur="valid()">
+    <span id="err1"></span>
+    <br><br>
+    <label for="">userName</label><br>
+    <input type="text"  id="username" placeholder="enter username" onblur="valid()">
+    <span id="err2"></span>
+    <br><br>
+    <label for="">Password</label><br>
+    <input type="text"  id="pass" placeholder="enter Password" onkeyup="valid()">
+    <span id="err3"></span>
+    <br><br>
+    <label for="">repassword</label><br>
+    <input type="text"  id="cpass" placeholder="enter re-enter" onkeyup="valid()">
+    <span id="err4"></span>
+    <br><br>
+    <label for="">mobile</label><br>
+    <input type="text"  id="mobile" placeholder="enter mobile" onkeyup="valid()">
+    <span id="err5"></span>
+    <input type="button" value="save" onkeyup="valid()">
+</body>
+</html>
