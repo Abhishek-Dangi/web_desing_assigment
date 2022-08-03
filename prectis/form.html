@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./form_vali.js"></script>
+</head>
+<style>
+    #fom {
+        border: 1px solid black;
+        height: 500px;
+        width: 400px;
+        margin-top: 100px;
+        padding: 20px;
+
+    }
+</style>
+
+<body onload="init()">
+    <center>
+        <div id="fom">
+            <input type="text" name="" id="name" placeholder="enter name" onblur="valid()">
+            <span id="err1"></span><br><br>
+            <input type="text" name="" id="username" placeholder="enter username" onblur="valid()">
+            <span id="err2"></span><br><br>
+            <input type="password" name="" id="password" placeholder="enter password" onblur="valid()">
+            <span id="err3"></span><br><br>
+            <input type="password" name="" id="cpassword" placeholder="enter cpassword" onblur="valid()">
+            <span id="err4"></span><br><br>
+            <input type=number" name="" id="email" placeholder="enter email" onblur="valid()">
+            <span id="err5"></span><br><br>
+            <input type=number" name="" id="mob" placeholder="enter mobile" onclick="valid()">
+            <span id="err6"></span><br><br>
+            <button onblur="valid()">save</button>
+        </div>
+    </center>
+</body>
+
+
+
+</html>
