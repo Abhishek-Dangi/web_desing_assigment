@@ -1,81 +1,90 @@
 <html>
-    <head>
-        <title> table tag </title>
-    </head>
-   <style>
-       table, tr,td{
-           border: 2px solid rgb(248, 242, 242);
-           border-collapse: collapse;
-           border-radius: 10px;
-       }
-       tr:nth-child(eve){
+
+<head>
+    <title> table tag </title>
+</head>
+<style>
+    table,
+    tr,
+    td {
+        border: 2px solid rgb(248, 242, 242);
+        border-collapse: collapse;
+        border-radius: 10px;
+    }
+
+    tr:nth-child(eve) {
         background-color: rgb(255, 235, 57)
-       }
-       /* tr:nth-child(even) {
+    }
+
+    /* tr:nth-child(even) {
   background-color: rgba(150, 212, 212, 0.4);
 }
 
 th:nth-child(even),td:nth-child(even) {
   background-color: rgba(150, 212, 212, 0.4);
 } */
+</style>
 
-   </style>
-    <body>
-        <table style="border:5px solid red;" cellspacing="4px" cellpadding="10px"><!--spacing and padding between box of tabel -->
-            <thead>
-                <th colspan="4 ">student records</th>
-            </thead>
-            <thead bgcolor="yellow">
-                <th>s.no</th>
-                <th>name</th>
-                <th>roll nu</th>
-                <th>marks</th>
-            </thead>
-            <tfoot bgcolor="pink"><!--all data of foot  tag is cane in fotter of table-->
-                <th>s.no</th>
-                <th>name</th>
-                <th>roll nu</th>
-                <th>marks</th>
-            </tfoot>
-            <tr>
-                <td>101</td>
-                <td>abhi</td>
-                <td rowspan="4" bgcolor="green">9324</td> <!--merg row in one row-->
-                <td rowspan="2">60</td>
-            </tr>
-            <tr>
-                <td>102</td>
-                <td>uni</td>
-                <!-- <td>9324</td> -->
-                <!-- <td>60</td> -->
+<body>
+    <table style="border:5px solid red;" cellspacing="4px" cellpadding="10px">
+        <!--spacing and padding between box of tabel -->
+        <thead>
+            <th colspan="4 ">student records</th>
+        </thead>
+        <thead bgcolor="yellow">
+            <th>s.no</th>
+            <th>name</th>
+            <th>roll nu</th>
+            <th>marks</th>
+        </thead>
+        <tfoot bgcolor="pink">
+            <!--all data of foot  tag is cane in fotter of table-->
+            <th>s.no</th>
+            <th>name</th>
+            <th>roll nu</th>
+            <th>marks</th>
+        </tfoot>
+        <tr>
+            <td>101</td>
+            <td>abhi</td>
+            <td rowspan="4" bgcolor="green">9324</td>
+            <!--merg row in one row-->
+            <td rowspan="2">60</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>uni</td>
+            <!-- <td>9324</td> -->
+            <!-- <td>60</td> -->
 
-            </tr>
-            <td>103</td>
-                <td>lenovo</td>
-                <!-- <td>9324</td> -->
-                <td>70</td>
-        </table >
-       &nbsp;
-       <div style="border:2px solid rgb(33, 30, 30); width: 250px; padding: 20px;">
+        </tr>
+        <td>103</td>
+        <td>lenovo</td>
+        <!-- <td>9324</td> -->
+        <td>70</td>
+    </table>
+    &nbsp;
+    <div style="border:2px solid rgb(33, 30, 30); width: 250px; padding: 20px;">
         <h3>input tages are used in this </h3>
         <input text="number" placeholder="enter name"><br><br>
         <input text="email" placeholder="email"><br><br>
-        <input text="password"  placeholder="password"> <br>
+        <input text="password" placeholder="password"> <br>
         <input type="radio">male <br>
         <input type="radio">female <br>
         <input type="checkbox">hock <br>
         <input type="checkbox">crick <br>
         <select name="" id="">
 
-            
+
             <option selected="select">select</option>
-            <option value="science">science      </option>
+            <option value="science">science </option>
             <option value="maths">maths </option>
             <option value="chemistry">chemistry </option>
-            
+
         </select>
         <button href="#">save</button>
     </div>
 
-    </body>
+</body>
+
 </html>

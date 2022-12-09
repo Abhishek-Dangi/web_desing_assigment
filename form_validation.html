@@ -1,47 +1,127 @@
 <html>
-    <head>
-        <title></title>
-        <script src="./java_script/form_validation.js"></script>
-        <style>
-            #contain{
-                border: 1px solid black;
-                align-items: center;
-                height: 450px;
-                width: 350px;
-                background-color: rgb(183, 175, 175);
-            }
-        </style>
-    </head>
-    <body onload="init()">
-       
-            <div id="contain">
+
+<head>
+    <title></title>
+    <script src="./java_script/form_validation.js"></script>
+    <style>
+        #contain {
+            border: 1px solid black;
+            align-items: center;
+            height: 450px;
+            width: 350px;
+            background-color: rgb(183, 175, 175);
+        }
+
+        th {
+            border: 1px solid black;
+        }
+
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body onload="init()">
+
+    <div id="contain">
         <h3>Google form</h3>
-        <label for="name">Name</label><br>
-        <input type="text" id="name" placeholder="enter name" onblur="valid()">
-        <span id="err1"></span>
-        <br><br>
-        <label for="username">userName</label><br>
-        <input type="text"  id="username" placeholder="enter username" onblur="valid()">  
-        <span id="err2"></span>
-        <br><br>
-        <label for="pass">Password</label><br>
-        <input type="text" id="pass" placeholder="enter pass" onkeyup="valid()">
-        <span id="err3"></span>
-        <br><br>
-        <label for="cpas">cpass</label><br>
-        <input type="text" id="cpass" placeholder="re-enter Password" onkeyup="cheakpass()" >
-        <span id="err4"></span>
-        <br><br>
-        <label for="mobile">Mobile</label><br>
-        <input type="text" id="mobile" placeholder="enter mobile" onkeyup="valid()">
-        <span id="err5"></span>
-        <br><br>
-        <label for="">Email</label> <br>
-        <input id="email" placeholder="Enter email" onkeyup="valid()">
-        <span id="err6"></span><br><br>
-        <input type="button" value="save" onclick="valid()">
+        <form action="">
+            <label for="name">Name</label><br>
+            <input type="text" id="name" placeholder="enter name" onblur="valid()">
+            <span id="err1"></span>
+            <br><br>
+            <label for="username">userName</label><br>
+            <input type="text" id="username" placeholder="enter username" onblur="valid()">
+            <span id="err2"></span>
+            <br><br>
+            <label for="pass">Password</label><br>
+            <input type="text" id="pass" placeholder="enter pass" onkeyup="valid()">
+            <span id="err3"></span>
+            <br><br>
+            <label for="cpas">cpass</label><br>
+            <input type="text" id="cpass" placeholder="re-enter Password" onkeyup="cheakpass()">
+            <span id="err4"></span>
+            <br><br>
+            <label for="mobile">Mobile</label><br>
+            <input type="text" id="mobile" placeholder="enter mobile" onkeyup="valid()">
+            <span id="err5"></span>
+            <br><br>
+            <label for="">Email</label> <br>
+            <input id="email" placeholder="Enter email" onkeyup="valid()">
+            <span id="err6"></span><br><br>
+            <input type="button" id="submit" value="Submit" onclick="valid()">
+
+        </form>
     </div>
 
-    </body>   
+    <table id="table" style="border:1px solid black">
+        <tr>
+            <th>Name</th>
+            <th>userName</th>
+            <th>Password</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th>action</th>
+
+        </tr>
+    </table>
+
+    <script type="text/javascript">
+
+        document.getElementById("submit").onclick = function () {
+            document.getElementById("table").style.display = "block";
+
+            var table = document.getElementById("table");
+            var row = table.insertRow(-1);
+            var name = row.insertCell(0);
+            var userName = row.insertCell(1);
+            var Password = row.insertCell(2);
+            var CPassword = row.insertCell(3);
+            var Mobile = row.insertCell(4);
+            var Email = row.insertCell(5);
+            var action = row.insertCell(6);
+            name.innerHTML = document.getElementById("name").value;
+            userName.innerHTML = document.getElementById("username").value;
+            Password.innerHTML = document.getElementById("pass").value;
+            CPassword.innerHTML = document.getElementById("cpass").value;
+            Mobile.innerHTML = document.getElementById("mobile").value;
+            Email.innerHTML = document.getElementById("email").value;
+            action.innerHTML = `<a onClick="onEdit(this)" style="background-color:red">Edit</a>
+                       <a onClick="onDelete(this)">Delete</a>`;
+            return false;
+        }
+
+        var selectedRow = null;
+        function resetForm() {
+            document.getElementById("name").value = "";
+            document.getElementById("username").value = "";
+            document.getElementById("pass").value = "";
+            document.getElementById("cpass").value = "";
+            document.getElementById("mobile").value = "";
+            document.getElementById("email").value = "";
+            selectedRow = null;
+        }
+
+        function onEdit(td) {
+            selectedRow = td.parentElement.parentElement;
+            document.getElementById("name").value = selectedRow.cells[0].innerHTML;
+            document.getElementById("username").value = selectedRow.cells[1].innerHTML;
+            document.getElementById("pass").value = selectedRow.cells[2].innerHTML;
+            document.getElementById("cpass").value = selectedRow.cells[3].innerHTML;
+            document.getElementById("mobile").value = selectedRow.cells[4].innerHTML;
+            document.getElementById("email").value = selectedRow.cells[5].innerHTML;
+        }
+        function onDelete(td) {
+            if (confirm('Are you sure to delete this record ?')) {
+                row = td.parentElement.parentElement;
+                document.getElementById("table").deleteRow(row.rowIndex);
+                resetForm();
+            }
+        }
+
+    </script>
+
+</body>
 
 </html>
